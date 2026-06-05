@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;650&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* Map standard gray tokens to a light warm cream and peach palette */
+  --color-gray-950: #FEF8F0; /* Main page background: light cream */
+  --color-gray-900: #FFFFFF; /* Panels/Cards background: white */
+  --color-gray-850: #F3E2CF; /* Border separator */
+  --color-gray-800: #EED4B7; /* Border lines: warm beige */
+  --color-gray-750: #E5C39F; /* Active grid borders */
+
+  /* Map standard light gray text tokens to high contrast dark gray text for light mode */
+  --color-gray-100: #1C1917; /* Main text: dark stone/gray */
+  --color-gray-200: #292524; /* Title text */
+  --color-gray-300: #44403C; /* Secondary text */
+  --color-gray-400: #57534E; /* Paragraph description text */
+  --color-gray-500: #78716C; /* Muted description text */
+  --color-gray-600: #87817D; /* Subtext */
+
+  --animate-fade-in: fade-in 0.25s ease-out forwards;
+  --animate-scale-up: scale-up 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  --animate-bounce-slow: bounce-slow 3s ease-in-out infinite;
+  --animate-bounce-horizontal: bounce-horizontal 1.2s infinite;
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes scale-up {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  @keyframes bounce-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+  @keyframes bounce-horizontal {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(4px); }
+  }
+
+  --animate-rotate-device: rotate-device 2s ease-in-out infinite;
+
+  @keyframes rotate-device {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(90deg); }
+    50% { transform: rotate(90deg); }
+    75% { transform: rotate(0deg); }
+  }
+}
+
+body {
+  background-color: #FEF8F0; /* Warm light cream background */
+  color: #1C1917; /* Dark slate text for high contrast readability */
+  font-family: var(--font-sans);
+}
+
+/* Custom scrollbars for logs */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Custom scrollbars for modals / light panels */
+.custom-scrollbar-light::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar-light::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 4px;
+}
+
+.custom-scrollbar-light::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.custom-scrollbar-light::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+
