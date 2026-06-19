@@ -24,13 +24,7 @@ Suka Sorter adalah permainan web edukasi berbasis React, TypeScript, dan Vite ya
    npm install
    ```
 
-2. **Pengaturan Variabel Lingkungan:**
-   Salin atau buat file `.env.local` di root direktori dan masukkan kunci API Gemini Anda:
-   ```env
-   GEMINI_API_KEY="kunci_api_gemini_anda"
-   ```
-
-3. **Jalankan Server Pengembangan:**
+2. **Jalankan Server Pengembangan:**
    ```bash
    npm run dev
    ```

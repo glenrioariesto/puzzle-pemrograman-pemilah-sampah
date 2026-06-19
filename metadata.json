@@ -2,5 +2,5 @@
   "name": "Puzle Pemrograman Pemilah Sampah",
   "description": "Belajar Computational Thinking (Decomposition, Pattern Recognition, Abstraction, Algorithm) lewat game menyusun instruksi pemrograman visual untuk membantu karakter robot memilah sampah ke tong yang tepat secara optimal.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": []
 }
