@@ -5,6 +5,7 @@
 
 import React from 'react';
 import { ArrowRight, Volume2, VolumeX, BookOpen } from 'lucide-react';
+import logoPusbuk from '@/assets/logo-pusbuk.webp';
 
 interface SplashProps {
   onStart: () => void;
@@ -16,15 +17,13 @@ interface SplashProps {
 export default function Splash({ onStart, isMuted, onToggleMute, onShowHowToPlay }: SplashProps) {
   return (
     <div className="relative max-h-screen h-screen w-full flex flex-col items-center justify-center p-6 text-center overflow-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#FCDCB5]/10 via-[#FEF8F0] to-[#FEF8F0] selection:bg-indigo-500/30 font-sans leading-relaxed">
-      {/* Top Left Logo */}
-      <div className="absolute top-6 left-6 flex items-center gap-3 animate-fade-in select-none">
-        <div className="w-10 h-10 rounded-2xl bg-indigo-600 flex items-center justify-center border border-indigo-400 shadow-md">
-          <span className="text-2xl">🤖</span>
-        </div>
-        <div className="text-left hidden sm:block">
-          <span className="font-extrabold text-sm sm:text-base text-gray-900 tracking-wider font-sans block leading-none">SUKA SORTER</span>
-          <span className="text-[10px] text-gray-500 tracking-tight block mt-0.5">Pemilah Sampah Pintar</span>
-        </div>
+      {/* Pusbuk Logo on Absolute Top Left - Responsive Size */}
+      <div className="absolute top-3 left-3 sm:top-5 sm:left-5 z-50 shrink-0 animate-fade-in">
+        <img 
+          src={logoPusbuk} 
+          alt="Logo Pusbuk" 
+          className="h-10 sm:h-14 md:h-16 w-auto object-contain"
+        />
       </div>
 
       {/* Top Right Controls */}
